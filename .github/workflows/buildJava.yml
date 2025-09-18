@@ -12,6 +12,10 @@ jobs:
     env:
       SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
     steps:
+      - name: "Afficher le dépôt courant1"
+        run: |
+          echo "Répertoire courant : $(pwd)"
+          echo "GITHUB_WORKSPACE = $GITHUB_WORKSPACE"
       - name: Caching
         uses: actions/cache@v4
         with:
@@ -28,3 +32,7 @@ jobs:
           distribution: 'corretto'
       - name: Construction
         run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=$(echo ${{ github.repository }} | sed 's-/-_-') 
+      - name: "Afficher le dépôt courant 2"
+        run: |
+          echo "Répertoire courant : $(pwd)"
+          echo "GITHUB_WORKSPACE = $GITHUB_WORKSPACE"
