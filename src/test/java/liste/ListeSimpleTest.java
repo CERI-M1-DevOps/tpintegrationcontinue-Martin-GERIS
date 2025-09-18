@@ -63,6 +63,7 @@ class ListeSimpleTest {
         assertEquals(4, listeATester.tete.getSuivant().getElement());
     }
 
+    @Test
     void modifiePremierInexistant() {
         listeATester.ajout(1);
         listeATester.ajout(2);
