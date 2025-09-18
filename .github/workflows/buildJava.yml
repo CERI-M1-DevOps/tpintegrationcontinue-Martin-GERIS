@@ -15,7 +15,7 @@ jobs:
       - name: Caching
         uses: actions/cache@v4
         with:
-          path: ../src/cache
+          path: ./src/cache
           key: custom-maven-${{ hashFiles('**/pom.xml') }}
       - name: Checkout
         uses: actions/checkout@v4
