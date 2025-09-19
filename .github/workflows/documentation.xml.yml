@@ -28,5 +28,5 @@ jobs:
       - name: Deploiement
         uses: peaceiris/actions-gh-pages@v4
         with:
-          publish_dir: target/reaport/apidoc
+          publish_dir: ./target/reports/apidocs
           github_token: ${{ secrets.GITHUB_TOKEN }}
