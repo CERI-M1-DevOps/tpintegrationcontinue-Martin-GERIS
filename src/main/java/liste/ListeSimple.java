@@ -4,10 +4,18 @@ public class ListeSimple {
     private long size;
     Noeud tete;
 
+   /** 
+    * Retourne la taille de la liste
+    * @return Taille de la liste 
+    */ 
     public long getSize() {
         return size;
     }
 
+   /** 
+    * Ajout d'un noeud en tête
+    * @param element élément du noeud à ajouter
+    */ 
     public void ajout(int element) {
         tete = new Noeud(element, tete);
         size++;
@@ -30,6 +38,10 @@ public class ListeSimple {
         }
     }
 
+   /** 
+    * Affiche la liste dans la console
+    * @return Chaîne de caractères représentant la liste
+    */ 
     public String toString() {
         StringBuilder sb = new StringBuilder("ListeSimple(");
         Noeud n = tete;
@@ -43,6 +55,10 @@ public class ListeSimple {
         return sb.toString();
     }
 
+   /** 
+    * Supprime le premier noeud contenant l'élément spécifié
+    * @param element élément du noeud à supprimer 
+    */ 
     public void supprimePremier(Object element) {
         if (tete != null) {
             if (tete.getElement() == element) {
